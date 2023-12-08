@@ -1,0 +1,463 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    width: 100%;
+    background-color: #008170;
+    box-sizing: border-box;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+}
+  
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+  }
+
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+@import url( _animate-extended.scss);
+
+nav label img{
+    width: 120px;
+    margin-left: 70px;
+    padding: 10px 0;
+}
+
+nav{
+    background: #1d2533;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}
+
+nav ul{
+    float: right;
+    margin-right: 70px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 1px;  
+}
+
+nav ul li a{
+    color: white;
+    font-size: 13px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li a:hover{
+    background:#008170;
+
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+        
+    }
+}
+
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1d2533;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a.active,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+
+@media (max-width:952px){
+    #nav-logo a img{
+        width: 90px;
+        margin-left: 20px;
+    }
+    .navbar div a{
+        font-size: 16px;
+        
+    }
+}
+@media (max-width:858px){
+    .check{
+        display: block;
+    }
+    .navbar .ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #232D3F;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .navbar .ul a{
+        display: block;
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0004;
+    }
+    .check:checked .navbar .ul{
+        left: 0;
+    }
+}
+
+/* main section */
+
+#main {
+    background: url(/images/ME.jpg) no-repeat;
+}
+
+#main div h1{
+    font-size: 3rem;
+}
+
+.intro {
+    text-align: left;
+    padding: 20%;
+    color: #fff;
+}
+
+.intro span {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin: 0px 5px;
+    transition: 0.5s;
+}
+
+.intro span:hover {
+    opacity: 1;
+}
+
+/* about me section */
+
+.myname h1{
+    text-align: center;
+    padding: 20px 20px 0;
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.myname h1:hover{
+    font-size: 2.4rem;
+}
+
+.about{
+    margin-left: 10%;
+    padding: 20px;
+}
+
+/* experience section */
+
+.experience h1{
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    transition: 0.5s;
+    animation: rubberBand 1s ease;
+}
+
+@keyframes rubberBand {
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.experience h1:hover {
+    font-size: 2.4rem;
+}
+
+.expcontent {
+    margin-left: 10%;
+    padding: 20px;
+}
+
+/* education section */
+
+#education h1{
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size:2.1rem;
+    transition: 0.5s;
+    animation: rubberBand 1s ease;
+}
+
+@keyframes rubberBand {
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+#education h1:hover {
+    font-size: 2.4rem;
+}
+
+.educcontent {
+    margin-left: 10%;
+    padding: 20px;
+}
+
+/* skills section */
+
+#skills h1{
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size:2.1rem;
+    transition: 0.5s;
+    animation: rubberBand 1s ease;
+}
+
+@keyframes rubberBand {
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+#skills h1:hover {
+    font-size: 2.4rem;
+}
+
+.content {
+    margin-left: 10%;
+    padding: 20px;
+}
+
+/* contact me section */
+
+.contactme {
+    text-align: center;
+    padding: 20px;
+}
+
+.contactme h1 {
+    font-size:2.1rem;
+    position: relative;
+    transition: 0.5s;
+    animation: rubberBand 1s ease;
+}
+
+@keyframes rubberBand {
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.contactme h1:hover {
+    font-size: 2.4rem;
+    
+}
+
+.para a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.contactme h3 p {
+    font-size: 1rem;
+}
+
+.mycont{
+    display: inline-block;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.btn input {
+    background: #232D3F;
+    border-radius: 10%;
+}
+
+iframe {
+    width: 100%;
+    padding: 10px;
+}
+
+/* footer section */
+
+.footercontainer {
+    width: 100%;
+    padding: 70px 30px 30px;
+    background-color: #232D3F;
+    color: #fff;
+}
+
+.socmedicons {
+    display: flex;
+    justify-content: center;
+}
+
+.socmedicons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socmedicons a i {
+    font-size: 2em;
+    color: #232D3F;
+    opacity: 0.9;
+}
+
+.socmedicons a:hover {
+    background-color: #232D3F;
+    transition: 0.5s;
+}
+
+.socmedicons a i:hover {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footernav {
+    margin: 30px 0;
+}
+
+.footernav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footernav ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    font-size: clamp(0.5rem, -0.125rem + 2vw, 1rem);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footernav ul li a:hover {
+    opacity: 1;
+}
+
+.footerbottom {
+    background-color: #1d2533;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerbottom p {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin: 0px 5px;
+    transition: 0.5s;
+}
+
+.designer:hover {
+    opacity: 1;
+}
